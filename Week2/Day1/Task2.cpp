@@ -43,7 +43,12 @@ public:
 
 class ZELIO : public Invertor {
 public:
-    ZELIO() : Invertor() {} // ZELIO has battery by default
+    Battery* battery;
+    ZELIO() {
+        Invertor();
+        battery->hasBattery = true;
+
+    } // ZELIO has battery by default
 };
 
 class REGALIA : public SolarInvertor {
@@ -53,7 +58,12 @@ public:
 
 class ICRUZE : public Invertor {
 public:
-    ICRUZE() : Invertor() {} // ICRUZE has battery by default
+    Battery* battery;
+    ICRUZE(){
+        Invertor();
+        battery->hasBattery=true;
+
+    }// ICRUZE has battery by default
 };
 
 class Company {
